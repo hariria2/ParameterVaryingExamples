@@ -1,0 +1,19 @@
+clear all; close all; clc;
+
+
+%runSimplePund();
+%rm = runResMixing();
+
+r = @(x) x;
+x = linspace(-5, 5, 100);
+rr = zeros(2, length(x));
+for ii = 1:length(x)
+    p = [-1 0 r(x(ii))];
+    rr(:,ii) = roots(p);
+end
+
+subplot(2,1,1)
+plot(x, real(rr))
+
+subplot(2,1,2)
+plot(x, imag(rr))
