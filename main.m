@@ -1,6 +1,6 @@
 clear all; close all; clc;
 
 
-%runSimplePund();
+runSimplePend();
 %rm = runResMixing();
-pf = runPitchFork();
+%pf = runPitchFork();

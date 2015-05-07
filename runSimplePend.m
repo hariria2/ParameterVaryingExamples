@@ -1,4 +1,4 @@
-function runSimplePund() 
+function runSimplePend() 
     Tend = 25;
     Dt   = 0.01;
     L    = @(t) 0.5+0.5*t;
@@ -21,7 +21,7 @@ function runSimplePund()
     sp.PlotPhase('All',2);
     sp.PlotPhysicalSpace('All', 3);
 
-    sp.timePlotEigen('All', 4, 'on');
+    sp.timePlotEigen('All', 4, 'off');
     sp.argonPlotEigen();
     %sp.makeMovie(6, 'phase');
     %sp.makeMovie(7, 'physicalspace');

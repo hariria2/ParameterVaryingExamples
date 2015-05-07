@@ -31,7 +31,8 @@ classdef ResonantMixing < handle
             rm.dim   = length(IC);
         end
         function Simulate(obj)
-            [~,y] = ode45(@obj.Flow, obj.t, obj.ic);
+            options = odeset('RelTol',1e-12,'AbsTol',1e-12);
+            [~,y] = ode45(@obj.Flow, obj.t, obj.ic, options);
             obj.result = y;
         end
         function dy = EulerUpdate(obj, y)

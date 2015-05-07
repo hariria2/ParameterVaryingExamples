@@ -1,11 +1,11 @@
 function rm = runResMixing() 
     Tend  = 100;
-    Dt    = 0.01;
+    Dt    = 0.001;
     eps   = 0.03;
-    b     = 0.0;
-    omega = 0;
-    IC    = [0.1,0,0];
-
+    b     = 0.003;
+    omega = 2.5;
+    IC    = [0.3,0.3,-0.3];
+    
     rm = ResonantMixing(Tend, Dt, eps, b, omega, IC);
     
     rm.Simulate();
@@ -14,7 +14,7 @@ function rm = runResMixing()
     rm.PlotTrajectory('All', 1);
     rm.PlotSlowPlane('All', 2);
     rm.PlotPhysicalSpace('All', 3);
-    rm.timePlotEigen('All', 4, 'on');
+    rm.timePlotEigen('All', 4, 'off');
     %sp.makeMovie(6, 'phase');
     %sp.makeMovie(7, 'physicalspace');
     %SaveVid(sp.PhaseFrames,'./Results/PhasePlane2.avi')
