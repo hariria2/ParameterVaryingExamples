@@ -1,6 +1,7 @@
 clear all; close all; clc;
 
 
-runSimplePend();
+k = runKuramoto();
+%runSimplePend();
 %rm = runResMixing();
 %pf = runPitchFork();
